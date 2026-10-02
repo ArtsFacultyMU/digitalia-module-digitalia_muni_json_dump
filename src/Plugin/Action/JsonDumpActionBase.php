@@ -30,7 +30,7 @@ abstract class JsonDumpActionBase extends ActionBase {
 	 */
 	public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
 		$instance = new static($configuration, $plugin_id, $plugin_definition);
-		$instance->logger = $container->get('logger.factory')->get('digitalia_muni_general_includes');
+		$instance->logger = $container->get('logger.factory')->get('digitalia_muni_json_dump');
 		$instance->messenger = $container->get('messenger');
 		return $instance;
 	}
