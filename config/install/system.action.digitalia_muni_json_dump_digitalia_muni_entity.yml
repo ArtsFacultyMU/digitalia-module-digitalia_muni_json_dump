@@ -1,0 +1,6 @@
+langcode: en
+status: true
+id: digitalia_muni_json_dump_digitalia_muni_entity
+label: "Create JSON dump (digitalia_muni_entity)"
+type: digitalia_muni_entity
+plugin: digitalia_muni_json_dump_digitalia_muni_entity
