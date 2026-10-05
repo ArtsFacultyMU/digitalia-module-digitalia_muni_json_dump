@@ -46,7 +46,8 @@ abstract class JsonDumpActionBase extends ActionBase {
     $module_handler = \Drupal::service('module_handler');
     $serializer = \Drupal::service("serializer");
 
-    $json_array = $serializer->normalize($entity);
+    // Array from normalization wasn't neary as detailed
+    $json_array = json_decode($serializer->serialize($entity, "json"));
 
     // Add relationships to dump
     if ($module_handler->moduleExists("group")) {
